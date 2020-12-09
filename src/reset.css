@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,600;1,600&family=Russo+One&display=swap');
+
+* {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-principal: #2d185e;
+  --color-secundario: #02005f;
+  --blanco: #fff;
+  --text: #333;
+}
+
+html {
+  font-family: "Kanit", sans-serif;
+  font-size: 10px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
