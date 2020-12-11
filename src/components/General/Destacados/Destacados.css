@@ -1,0 +1,19 @@
+.Destacados {
+    padding: 4rem 0;
+  }
+  
+  .Destacados h2 {
+    color: blue;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 3rem;
+  }
+  
+  .Destacados ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Destacados ul li {
+    width: 20%;
+  }
