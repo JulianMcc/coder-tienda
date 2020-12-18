@@ -1,0 +1,65 @@
+.productCard {
+    background: whitesmoke;
+    border-radius: 1.5rem;
+    box-shadow: black.0;
+    cursor: pointer;
+    transition: box-shadow 0.7s;
+  }
+  
+  .productCard:hover {
+    box-shadow: lightslategray;
+  }
+  
+  .productCard img {
+    width: 100%;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+  }
+  
+  .productCard div {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .productCard div h3 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .productCard div p {
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .productCard div .qty {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+  }
+  
+  .productCard div .qty button {
+    width: 20%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    background: var(--color-principal);
+    border-radius: 1rem;
+    color:whitesmoke;
+    font-size: 2rem;
+  }
+  
+  .productCard div .qty button:disabled {
+    background: whitesmoke;
+    cursor: no-drop;
+  }
+  
+  .productCard div .qty input {
+    width: 50%;
+    text-align: center;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+  }

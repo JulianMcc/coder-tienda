@@ -1,0 +1,28 @@
+  
+.NavCart {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.NavCart svg {
+  color:whitesmoke;
+  font-size: 2.1rem;
+}
+
+.NavCart span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  position: absolute;
+  right: -0.8rem;
+  top: -0.8rem;
+  background: whitesmoke;
+  line-height: 0;
+  color:black;
+}
