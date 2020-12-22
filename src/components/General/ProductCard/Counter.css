@@ -1,0 +1,16 @@
+  #Counter div button {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+    outline: none;
+    cursor: pointer;
+    background-color: lightslategray;
+    border-radius: 1rem;
+    color:whitesmoke;
+    font-size: 2rem;
+  }
+  
+  .Counter div button:disabled {
+    background: whitesmoke;
+    cursor: no-drop;
+  }

@@ -1,15 +1,9 @@
-import {useState} from 'react';
 import './ProductCard.css';
+import CountButton from './Counter.js';
 
 
 const ProductCard = ({titulo, precio}) => {
-const [qty, setQty] = useState(0);
 
-const handleClickResta = () => {
-    if(qty) {
-        setQty(qty - 1);
-    }
-}
 
     return (
         <article className="productCard">
@@ -17,14 +11,7 @@ const handleClickResta = () => {
             <div>
                 <h3>{titulo}</h3>
                 <div className="qty">
-                    <button 
-                        disabled={!qty ? 'disabled' : null } 
-                        onClick={handleClickResta}
-                    >
-                        -
-                    </button>
-                    <input type="text" value={qty} readOnly/>
-                    <button onClick={() => setQty(qty + 1)}>+</button>
+                <CountButton />
                 </div>
                 <p>${precio}</p>
             </div>
