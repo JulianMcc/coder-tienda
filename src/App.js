@@ -1,35 +1,24 @@
-import {useState} from 'react';
 import './reset.css';
 import NavAndWidgetCart from './components/General/NavAndWidgetCart/NavAndWidgetCart';
-import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProducts';
+import Home from './components/Home/Home'
+import Detail from './components/ProductDetail/Index';
 
 function App() {
-
-  const [message, setMessage] = useState('');
-
-  const task = new Promise((resolve, reject) => {
-    if(true) {
-      setTimeout(() => {
-        resolve('Vinilos cargados');
-      }, 4000)
-    } else {
-      reject('Intenta mas tarde');
-    }
-  })
-
-  task
-  .then(rta => setMessage(rta))
-  .catch(error => console.log(error));
-
+const sectionToShow = (section) => {
+  switch(section) {
+    case 'Home' : return <Home />
+    case 'Detail' : return <Detail />
+    default : return <Home />
+  }
+}
 
   return (
     <>
       <NavAndWidgetCart />
-      {message}
-      <FeaturedProducts />
+      {sectionToShow('Detail')}
     </>
   );
-  }
+}
 
 
 export default App;

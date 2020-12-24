@@ -2,7 +2,28 @@ import './nav.css';
 import NavItem from '../NavItem/NavItem';
 import NavCart from '../NavCart/NavCart';
 
-function Nav({titulo, action}) {
+function Nav({titulo, action, qty}) {
+
+    const navItems = [
+        {
+            texto: 'Rock',
+            ruta: '',
+        },
+        {
+            texto: 'Metal',
+            ruta: '',
+        },            
+        {
+            texto: 'Pop',
+            ruta: '',
+        },
+        {            
+            texto: 'Indie',
+            ruta: '',
+        },
+        
+    ]
+
     return (
     <header>
         <nav>
@@ -10,13 +31,14 @@ function Nav({titulo, action}) {
                 <h1>{titulo}</h1>
 
                 <ul>
-                <NavItem text="Rock" />
-                <NavItem text="Metal" />
-                <NavItem text="Pop" />
-                <NavItem text="Indie" />
+                {
+                    navItems.map((section, index) => <NavItem key={index} text={section.texto} />)
+                }
+                
                 </ul>
-
-                <NavCart action={action} />                
+                {
+                <NavCart action={action} qty={qty} />     
+                }      
             </div>
         </nav>
     </header>

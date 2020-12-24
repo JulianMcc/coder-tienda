@@ -7,10 +7,8 @@
 }
 
 :root {
-  --color-principal: #2d185e;
-  --color-secundario: #02005f;
-  --blanco: #fff;
-  --text: #333;
+  --color-principal: lightslategray;
+  --color-secundario: whitesmoke;
 }
 
 html {
@@ -20,7 +18,7 @@ html {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: auto;
   margin: auto;
 }
 

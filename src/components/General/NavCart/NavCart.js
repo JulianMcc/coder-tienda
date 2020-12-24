@@ -1,12 +1,12 @@
 import './NavCart.css';
 import {FiShoppingBag} from 'react-icons/fi'
 
-const NavCart = ({action}) => {
+const NavCart = ({action, qty}) => {
     return (
-        <div className="NavCart" onClick={action}>
-            <FiShoppingBag />
-            <span>0</span>
-        </div>
+            <div className="NavCart" onClick={action}>
+                <FiShoppingBag />
+                <span>{qty}</span>
+            </div>
     )
 }
 
