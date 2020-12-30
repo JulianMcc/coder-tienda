@@ -1,17 +1,18 @@
 import {useEffect, useState} from 'react';
 import ProductDetail from './ProductDetail';
-
+import {useParams} from 'react-router-dom';
 
 const Detail = () => {
+    const {id} = useParams();
     const [product, setProduct] = useState(null);
     const getProduct = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve({
-                id: 1, 
-                nombre: "RHCP - Californication",
-                foto: "https://www.mixup.com.mx/mixup/ImgMixup/Mixup_big/93624900085.jpg",
+                id: id, 
+                nombre: "Vinilo",
+                foto: "https://via.placeholder.com/350/FF0000/FFFFFF",
                 descripcion: "Made in Vietnam.",
-                precio: 4500
+                precio: 999
             })
         }, 420);
     });
@@ -28,7 +29,10 @@ const Detail = () => {
                 product ?
                 <div className="container">
                     <ProductDetail item={product} />
-                </div>: 
+                    <section>
+                        El id del producto seleccionado es {id}
+                    </section>
+                </div> : 
                 <p>Cargando producto...</p>
             }
         </>
