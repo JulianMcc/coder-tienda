@@ -2,37 +2,12 @@ import {useState, useEffect} from 'react';
 import ProductCard from '../../General/ProductCard/ProductCard';
 import './FeaturedProducts.css';
 import {useParams} from 'react-router-dom';
+import products from '../../data/products.json'
+
 
 const FeaturedProducts = () => {
     const [items, setItems] = useState([]);
     const {category_name} = useParams();
-
-    const products = [
-        {
-            id: 1,
-            cat: 'Rock',
-            titulo: 'RHCP - Californication',
-            precio: 4500,
-        },
-        {
-            id: 2,
-            cat: 'Rock',
-            titulo: 'Pearl Jam - Alive',
-            precio: 3300,
-        },
-        {
-            id: 3,
-            cat: 'Metal',
-            titulo: 'Nickelback - Curb',
-            precio: 4600,
-        },
-        {
-            id: 4,
-            cat: 'Nacional',
-            titulo: 'Bajofondo - Mardulce',
-            precio: 4000,
-        }
-    ]
 
     const gettingVinilos = new Promise((resolve, reject) => {
         setTimeout(() => {

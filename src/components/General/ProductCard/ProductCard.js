@@ -7,14 +7,13 @@ const ProductCard = ({titulo, precio, id}) => {
 
     return (
         <article className="productCard">
-            <h1><img src="https://via.placeholder.com/150/FF0000/FFFFFF"/></h1>
+            <h1><Link to={`/detail/${id}`}><img src="https://via.placeholder.com/150/FF0000/FFFFFF"/></Link></h1>
             <div>
-                <h3>{titulo}</h3>
+                <h3> {titulo} </h3>
                 <div className="qty">
                 <CountButton />
                 </div>
                 <p>${precio}</p>
-                <Link to={`/detail/${id}`}>Más info</Link>
             </div>
         </article>
     )

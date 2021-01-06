@@ -1,11 +1,19 @@
+import CountButton from '../General/ProductCard/Counter';
+import './Detail.css';
+
 const ProductDetail = ({item}) => {
+
     return (
         <article>
-            <h1>{item.nombre}</h1>
-            <p>Product SKU #{item.id}</p>
-            <img src={item.foto} alt=""/>
-            <p>Descripción del producto: {item.descripcion}</p>
-            <p>Precio: ${item.precio}</p>
+            <article className="product">
+                <div className="foto"><img src={item.foto} alt=""/></div>
+                <div className="info">
+                    <h1><p>{item.titulo}</p>
+                    <p>Descripción del producto: {item.descripcion}</p>
+                    <p>${item.precio}</p></h1>
+                    </div>
+                    <CountButton />
+            </article>
         </article>
     )
 }

@@ -5,6 +5,10 @@
     cursor: pointer;
     transition: box-shadow 0.7s;
   }
+
+  div h4  {
+    color: lightslategray;
+    }
   
   .productCard:hover {
     box-shadow: lightslategray;

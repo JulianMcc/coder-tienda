@@ -1,26 +1,31 @@
 import {useParams} from 'react-router-dom';
 import './Category.css'
+import '../Home/FeaturedProducts/FeaturedProducts.css';
+import ProductCard from '../General/ProductCard/ProductCard'
+import products from '../data/products.json'
 
 const Category = () => {
     const {category_name} = useParams();
 
-    const categoria = (cat) => {
-        switch(cat) {
-            case 'rock': return <p>Estos son los discos de {[cat]}</p>;
-            case 'indie': return <p>Estos son los discos de {[cat]}</p>;
-            case 'pop': return <p>Estos son los discos de {[cat]}</p>;
-            case 'metal': return <p>Estos son los discos de {[cat]}</p>;
-            case 'folk': return <p>Estos son los discos de {[cat]}</p>;
-            case 'nacional': return <p>Estos son los discos de {[cat]}</p>;
-            case 'electronica': return <p>Estos son los discos de {[cat]}</p>;
-            default: return <p>No tenemos discos de ese género</p>
-        }
-    }
+    const categoriaFiltrada =  products.filter(disk => disk.cat === category_name);
+
     return (
         <>
+            <p>Estos son los discos de {[category_name]}</p>
+            
             {
-            categoria(category_name) 
+                categoriaFiltrada.map((item, index) => (
+                    <li key={index}>
+                        <ProductCard
+                            id={item.id}
+                            titulo={item.titulo}
+                            precio={item.precio}
+                        />
+                    </li>
+                ))
             }
+            
+            
         </>
     )
 }

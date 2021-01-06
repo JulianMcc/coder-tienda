@@ -16,6 +16,16 @@ header {
     font-size: 5rem;
     margin-bottom: 0rem;
   }
+
+  a:link {
+    text-decoration: none;
+    color: whitesmoke
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: whitesmoke
+  }
   
   header nav ul {
     display: flex;

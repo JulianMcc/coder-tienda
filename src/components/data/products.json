@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "cat": "rock",
+        "titulo": "RHCP - Californication",
+        "precio": 4500,
+        "descripcion": "Disco de RHCP",
+        "foto": "https://via.placeholder.com/350/FF0000/FFFFFF"
+    },
+    {
+        "id": 2,
+        "cat": "rock",
+        "titulo": "Pearl Jam - Alive",
+        "precio": 3300,
+        "descripcion": "Disco de PJ",
+        "foto": "https://via.placeholder.com/350/FF0000/FFFFFF"
+    },
+    {
+        "id": 3,
+        "cat": "metal",
+        "titulo": "Nickelback - Curb",
+        "precio": 4600,
+        "descripcion": "Disco de Nickelback",
+        "foto": "https://via.placeholder.com/350/FF0000/FFFFFF"
+    },
+    {
+        "id": 4,
+        "cat": "nacional",
+        "titulo": "Bajofondo - Mardulce",
+        "precio": 4000,
+        "descripcion": "Disco de Bajofondo",
+        "foto": "https://via.placeholder.com/350/FF0000/FFFFFF"
+    }
+]
