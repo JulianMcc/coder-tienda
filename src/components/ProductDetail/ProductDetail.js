@@ -3,9 +3,9 @@ import './Detail.css';
 import {useHistory} from 'react-router-dom';
 
 const ProductDetail = ({item}) => {
-    const HandleClick = () => {
+    const IrAlCarrito = () => {
         const history = useHistory();
-        const HandleClick = () => {
+        let goCart = () => {
             history.push("/Carrito");
             }
     }
@@ -18,7 +18,7 @@ const ProductDetail = ({item}) => {
                     <p>Descripción del producto: {item.descripcion}</p>
                     <p>${item.precio}</p></h1>
                     </div>
-                    <h1 onClick={HandleClick}><CountButton /></h1>
+                    <h1 onClick={ goCart }><CountButton /></h1>
             </article>
         </article>
     )
