@@ -1,8 +1,14 @@
 import CountButton from '../General/ProductCard/Counter';
 import './Detail.css';
+import {useHistory} from 'react-router-dom';
 
 const ProductDetail = ({item}) => {
-
+    const HandleClick = () => {
+        const history = useHistory();
+        const HandleClick = () => {
+            history.push("/Carrito");
+            }
+    }
     return (
         <article>
             <article className="product">
@@ -12,7 +18,7 @@ const ProductDetail = ({item}) => {
                     <p>Descripción del producto: {item.descripcion}</p>
                     <p>${item.precio}</p></h1>
                     </div>
-                    <CountButton />
+                    <h1 onClick={HandleClick}><CountButton /></h1>
             </article>
         </article>
     )
